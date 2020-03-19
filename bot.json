@@ -1,0 +1,15 @@
+{
+    "game": "Giving Roles",
+    "username": "RoleBot",
+    "commands": [
+        "help",
+        "status",
+        "setrole",
+        "giveroles",
+        "listroles",
+        "checkuser",
+        "setinterval",
+        "userinfo"
+    ],
+    "token": "Add discord token here"
+}

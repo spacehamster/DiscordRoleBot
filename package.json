@@ -1,0 +1,25 @@
+{
+  "name": "discordbot2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node_modules/.bin/tsc -w",
+    "build": "node_modules/.bin/tsc",
+    "start": "node dist/index.js",
+    "respawn": "tsnd --respawn src/index.ts --watch src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.9.2",
+    "@types/node-cron": "^2.0.3",
+    "discord.js": "^12.0.2",
+    "node-cron": "^2.0.3",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.44"
+  }
+}

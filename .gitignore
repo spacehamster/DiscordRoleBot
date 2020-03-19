@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.vscode/
 package-lock.json
 bot.prod.json
 user_tags.txt
