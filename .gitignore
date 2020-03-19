@@ -1,0 +1,6 @@
+node_modules/
+dist/
+package-lock.json
+bot.prod.json
+user_tags.txt
+settings.json
