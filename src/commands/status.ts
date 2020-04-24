@@ -27,12 +27,14 @@ export default class SetRolesCommand implements IBotCommand {
         if (this._bot.loadUserTagsError) {
             answer.addField("Error", this._bot.loadUserTagsError);
         }
-        const botMember = this._bot.guild.members.resolve(this._bot.client.user.id);
-        if (!botMember.permissions.has("MANAGE_ROLES")) {
-            answer.addField("Warning", `Bot does not have manage roles permission`);
-        }
-        if (botMember.roles.highest.rawPosition <= this._bot.role.rawPosition) {
-            answer.addField("Warning", `Role ${botMember.roles.highest} must be higher then ${this._bot.role} to assign roles`);
+        if(this._bot.guild){
+            const botMember = this._bot.guild.members.resolve(this._bot.client.user.id);
+            if (!botMember.permissions.has("MANAGE_ROLES")) {
+                answer.addField("Warning", `Bot does not have manage roles permission`);
+            }
+            if (botMember.roles.highest.rawPosition <= this._bot.role.rawPosition) {
+                answer.addField("Warning", `Role ${botMember.roles.highest} must be higher then ${this._bot.role} to assign roles`);
+            }
         }
     }
 }
