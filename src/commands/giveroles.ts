@@ -16,7 +16,8 @@ export default class GiveRolesCommand implements IBotCommand {
         return this.CMD_REGEXP.test(msg);
     }
     public async process(msg: string, answer: IBotMessage): Promise<void> {
-        const members = this._bot.guild.members.cache
+        const allMembers = await this._bot.guild.members.fetch();
+        const members = allMembers
             .filter((m) => this._bot.userTags.has(m.user.tag))
             .filter((m) => !m.roles.cache.has(this._bot.role.id))
             .array();
