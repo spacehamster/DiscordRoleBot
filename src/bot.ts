@@ -75,7 +75,7 @@ export class Bot implements IBot {
                         this._logger.debug(`executing command ${cmd.constructor.name}`);
                         await cmd.process(text, answer);
                         if (answer.isValid()) {
-                            const msg = answer.richText?.title || "Invalid";
+                            const msg = answer.text || answer.richText?.title || "Invalid";
                             this._logger.debug(`sending answer ${ msg }`);
                             message.channel.send( answer.text || { embed: answer.richText })
                             .catch((err) => {
