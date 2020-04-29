@@ -21,7 +21,12 @@ export default class SetRolesCommand implements IBotCommand {
         answer.setTitle("Status");
         answer.addField("Guild", `${this._bot.guild}`);
         answer.addField("Role", `${this._bot.role}`);
-        answer.addField("Users", `${this._bot.userTags.size}`);
+        answer.addField("Users", `There are ${this._bot.userTags.size} users in the user list`);
+        if(this._bot.guild) {
+            const members = await this._bot.guild.members.fetch();
+            const assigned = members.filter(m => m.roles.cache.has(this._bot.role.id));
+            answer.addField("Users Assigned", `Role assigned to ${assigned.size} of ${members.size} guild members`);
+        }
         answer.addField("Job Schedule", `${this._bot.cronPatten ?? "Not Set"}`);
         answer.addField("Last Ran", `${this._bot.lastJobDate ?? "Never"}`);
         if (this._bot.loadUserTagsError) {
