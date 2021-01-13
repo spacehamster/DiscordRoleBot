@@ -44,7 +44,7 @@ A very simple bot for mass giving discord members a role based on a list of disc
   UserName3#0003
   ```
 * Clone or download this repo and then run  `npm install`
-* Build with `npm build`
+* Build with `npm run build`
 * Run `npm start`
 * The bot should now be running
 * Set the role you want to assign to users with the`/setrole RoleName` command
