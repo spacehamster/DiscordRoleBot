@@ -63,7 +63,7 @@ export class Bot implements IBot {
                 return;
             }
             // Only allow server managers to user the bot
-            if (message.member == null || !message.member.hasPermission("MANAGE_GUILD")) {
+            if (message.member === null || !message.member.hasPermission("MANAGE_GUILD")) {
                 return;
             }
             const text = message.cleanContent;
