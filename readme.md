@@ -4,6 +4,8 @@ A very simple bot for mass giving discord members a role based on a list of disc
 
 # Setup
 
+* Create a copy of the file bot.json and rename it to bot.prod.json 
+
 * Create a new discord application [here](https://discordapp.com/developers/applications/).
 
 ![image-20200318142110198](./readme.assets/image-20200318142110198.png)
@@ -12,7 +14,7 @@ A very simple bot for mass giving discord members a role based on a list of disc
 
 ![image-20200318142346876](./readme.assets/image-20200318142346876.png)
 
-* Click copy token and paste the token into the bot.prod.json file
+* Click copy token and paste the token into the token field of the bot.prod.json file
 
 ![image-20200318142639753](./readme.assets/image-20200318142613976.png)
 
