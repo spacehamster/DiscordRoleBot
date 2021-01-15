@@ -4,6 +4,8 @@ A very simple bot for mass giving discord members a role based on a list of disc
 
 # Setup
 
+* Install [NodeJS](https://nodejs.org/en/) and ensure NPM is available to the commandline
+
 * Create a copy of the file bot.json and rename it to bot.prod.json 
 
 * Create a new discord application [here](https://discordapp.com/developers/applications/).
