@@ -1,6 +1,6 @@
 import { IBot, IBotCommand, IBotCommandHelp, IBotMessage } from "../api";
 
-export default class SetRolesCommand implements IBotCommand {
+export default class ListRolesCommand implements IBotCommand {
     private readonly CMD_REGEXP = /^\/(listroles)(?: |$)/im;
     private _bot: IBot;
 

@@ -95,7 +95,7 @@ export class Bot implements IBot {
                                         this.logger.error(`Error sending error dm to ${message.author} ${replyErr}`);
                                     });
                             });
-                        } else {
+                        } else if (answer.hasResponse) {
                             this._logger.debug(`invalid answer`);
                         }
                         break;
@@ -178,8 +178,10 @@ export class Bot implements IBot {
     }
     private loadSettings() {
         fs.readFile("settings.json", {encoding : "utf-8"}, (err, data) => {
-            if (err) {
-                this.logger.error(`Error reading settings ${err}`);
+            if (err?.code === "ENOENT") {
+                this.logger.debug(`Settings file not found. Settings file will be created after role is assigned`);
+            } else if(err) {
+                this.logger.error(`Error reading settings ${err}.`);
             } else {
                 const settings = JSON.parse(data) as ISettings;
                 this.logger.debug(`Guilds ${this.client.guilds.cache.array()}`);

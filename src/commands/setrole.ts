@@ -19,7 +19,7 @@ export default class SetRolesCommand implements IBotCommand {
     public async process(msg: string, answer: IBotMessage): Promise<void> {
         const roleName = msg.replace(this.CMD_REGEXP, "");
         const role = answer.message.guild.roles.cache.filter((r) => r.name === roleName).first();
-        if (role){
+        if (role) {
             answer.setTextOnly(`Setting role to ${role} ${role.id}`);
             this._bot.logger.debug(`Setting role to ${role.name} - ${role}`);
             this._bot.guild = role.guild;

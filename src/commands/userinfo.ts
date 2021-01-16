@@ -20,7 +20,7 @@ export default class UserInfoCommand implements IBotCommand {
         answer.setTitle("User Info");
         const arg = msg.replace(this.CMD_REGEXP, "");
         let users = answer.message.mentions.users.array();
-        if (users.length === 0){
+        if (users.length === 0) {
             const user = this._bot.client.users.resolve(arg);
             if (user !== null) {
                 users = [user];

@@ -5,6 +5,7 @@ export class BotMessage {
     public readonly message: Discord.Message | Discord.PartialMessage;
     public richText?: Discord.MessageEmbed;
     public text?: string;
+    public hasResponse: boolean = true;
 
     constructor(message: Discord.Message | Discord.PartialMessage) {
         this.message = message;
@@ -12,7 +13,8 @@ export class BotMessage {
     }
 
     public isValid(): boolean {
-        return (this.text !== null && this.text !== undefined) ||
+        return this.hasResponse &&
+                (this.text !== null && this.text !== undefined) ||
                 (this.richText !== null && this.richText !== undefined);
     }
 

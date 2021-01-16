@@ -68,6 +68,7 @@ type MessageColor =
 export interface IBotMessage {
     readonly user: Discord.User;
     readonly message: Discord.Message | Discord.PartialMessage;
+    hasResponse: boolean;
     setTextOnly(text: string): IBotMessage;
     addField(name: string, value: string): IBotMessage;
     addBlankField(): IBotMessage;

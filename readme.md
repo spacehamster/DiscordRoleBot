@@ -16,15 +16,19 @@ A very simple bot for mass giving discord members a role based on a list of disc
 
 ![image-20200318142346876](./readme.assets/image-20200318142346876.png)
 
-* Click copy token and paste the token into the token field of the bot.prod.json file
+* Under the bot tab, Click copy token and paste the token into the token field of the bot.prod.json file
 
 ![image-20200318142639753](./readme.assets/image-20200318142613976.png)
 
-* Set the bot's icon
+* Under the bot tab, Set the bot's icon
 
-* Unchecked Public Bot
+* Under the bot tab, Unchecked Public Bot
 
 ![image-20200318142712657](./readme.assets/image-20200318142712657.png)
+
+* Under the bot tab, check the Server Members Intent
+
+![image-20210116130247654](./readme.assets/image-20210116130247654.png)
 
 
 
